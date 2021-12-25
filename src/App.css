@@ -1,0 +1,86 @@
+.page-item li {
+  float : left;
+  margin-left : 12px;
+  margin-bottom: 50px;
+  list-style: none;
+  background: black;
+  color : white ;
+  padding : 12px;
+}
+.container {
+  border: 1px solid red;
+  width : 180px;
+  height : 400px;
+  float : left;
+}
+.h2-title {
+  color : red;
+}
+.h4-title {
+  color : rgb(139, 135, 135);
+  text-decoration-line : line-through;
+}
+.button-card {
+  background: rgb(46, 108, 201);
+  color : white;
+  border : 1px solid silver;
+  padding : 9px;
+}
+.icon-cart {
+  position: fixed;
+  right : 40px;
+  top : 30px;
+}
+.fa-shopping-cart {
+  font-size: 30px;
+}
+.quantity-card {
+  position: relative;
+  top : -45px;
+  right : -11px;
+  background: red;
+  width: 20px;
+  height : 20px;
+  color : white;
+  border-radius: 80%;
+}
+.list-card {
+  border: 1px soli red;
+  width : 290px;
+  height : 1200px;
+  position: fixed;
+  top : 60px;
+  right : 24px;
+  background: rgb(245, 245, 245);
+}
+.image-cart {
+  
+  float : left;
+  margin-right : 15px;
+}
+.more-card {
+  padding-top : 12px;
+  border-bottom: 1px dotted black;
+}
+.more-card input {
+  width : 20px;
+
+}
+.inputQuantity {
+  position: relative;
+  top: -35px;
+  left : 80px;
+  
+}
+.close-card {
+  margin-left : 12px;
+  font-size: 25px;
+}
+.over-flow{
+  width : 290px;
+  height : 500px;
+  overflow: auto;
+}
+.active-li {
+  background: red !important;
+}
