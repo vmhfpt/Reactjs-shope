@@ -1,0 +1,240 @@
+:root {
+    --primary-color: #fb5533;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --boder-color: #dbdbdb;
+    --star-gold-color: #FFCE3E;
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height: 46px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    cursor: default;
+}
+
+html {
+    /* HACK */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.667%;
+}
+
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.333%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: ModalFadeIn ease-in 0.1s;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal__body {
+    position: relative;
+    margin: auto;
+}
+
+@keyframes ModalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    } to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Btn Style */
+
+.btn {
+    background-color: var(--white-color);
+    min-width: 124px;
+    height: 34px;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    outline: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.btn--normal:hover {
+    cursor: pointer;
+    background-color: var(--boder-color);
+}
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.btn--size--s {
+    font-size: 1.2rem;
+    height: 32px;
+    padding: 0 8px;
+}
+
+/* Selection  */
+
+.select-input {
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    border-radius: 2px;
+    font-size: 1.4rem;
+}
+
+.seclect-input__icon {
+    font-size: 1.4rem;
+    color: #888888;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 2px);
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    display: none;
+    animation: fadeIn ease-in 0.3s;
+    z-index: 1;
+    box-shadow: 0 1px 2px #e0e0e0;
+}
+
+.select-iput__item {
+    padding: 4px 0;
+}
+
+.select-input__link {
+    color: var(--text-color);
+}
+
+.select-input__link:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination__item {
+    margin: 0 16px;
+}
+
+.pagination__item-link {
+    display: block;
+    font-size: 2rem;
+    color: #939393;
+    min-width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 2px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.pagination__item--active .pagination__item-link{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+
+}
+
+.pagination__item--active .pagination__item-link:hover {
+    background-color: #ed5c3f;
+}
